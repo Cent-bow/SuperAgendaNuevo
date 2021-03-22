@@ -1,8 +1,57 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model IEnumerable<Contacto>
+@{ ViewData["Title"] = "Home Page"; }
 
 <div class="text-center">
-    <h1 class="display-4">Bienvenidos a mi super Agenda</h1>
- 
+    <h1 class="display-4">Bienvenidos a mi Super Agenda</h1> 
 </div>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Telefono Movil</th>
+            <th>Telefono Casa</th>
+            <th>Telefono Trabajo</th>
+            <th>Empresa</th>
+            <th>Direccion</th>
+            <th>Cedula</th>
+            <th>Correo</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Instagram</th>
+            <th>Facebook</th>
+            <th>Pagina web</th>
+            <th>Puesto de trabajo</th>
+            <th>Foto</th>
+            
+
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.Nombres</td>
+            <td>@item.Apellidos</td>
+            <td>@item.TelefonoMovil</td>
+            <td>@item.TelefonoCasa</td>
+            <td>@item.TelefonoTrabajo</td>
+            <td>@item.Empresa</td>
+            <td>@item.Direccion</td>
+            <td>@item.Cedula</td>
+            <td>@item.Correo</td>
+            <td>@item.FechaNacimiento.ToShortDateString()</td>
+            <td>@item.Instagram</td>
+            <td>@item.Facebook</td>
+            <td>@item.PaginaWeb</td>
+            <td>@item.PuestoTrabajo </td>
+            
+            
+          
+
+
+        </tr>}
+    </tbody>
+</table>

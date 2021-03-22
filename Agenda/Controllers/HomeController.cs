@@ -27,11 +27,16 @@ namespace Agenda.Controllers
             return View(contactos);
         }
 
+
+
+
+
         public IActionResult Agregar()
         {
             return View();
         }
 
+        [HttpPost]
         public IActionResult Agregar (Contacto Input)
         {
             if (ModelState.IsValid)

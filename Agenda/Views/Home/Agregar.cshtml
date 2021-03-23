@@ -1,10 +1,11 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
+@model Agenda.Models.Contacto
 @{
 }
 
-<form>
+<form method="post" action="/Home/Agregar" class="form-horizontal">
     <fieldset>
 
 
@@ -18,6 +19,7 @@
             <p> Nombres <input type="text" name="Nombres" class="form-control" required /> </p>
             <p> Apellidos <input type="text" name="Apellidos" class="form-control" required /> </p>
             <p> Teléfono Movil <input type="text" name="TelefonoMovil" class="form-control" required /> </p>
+            
 
         </fieldset>
         <br />
@@ -43,11 +45,11 @@
 
         </fieldset> <br />
 
-        <fieldset>
+           <fieldset>
 
-            <textarea name="texto" rows="5" cols="60" placeholder="Agregar nota"></textarea>
+             <textarea name="Nota" rows="5" cols="60" placeholder="Agregar nota"></textarea>
 
-        </fieldset> <br />
+           </fieldset> <br />
 
 
         <input type="submit" name="btn-enviar" id="btn-enviar" value="Enviar" />
@@ -66,16 +68,15 @@
                 border-radius: 10px;
                 width: 100px;
                 box-shadow: aqua;
-               
             }
 
                 #btn-enviar:hover {
                     background-color: midnightblue
                 }
-
         </style>
 
-        <input type="submit" name="btn-borrar" id="btn-borrar" value="Borrar" />
+        <input type="reset" name="btn-borrar" id="btn-borrar" value="Borrar" />
+
 
         <style>
 
@@ -92,17 +93,42 @@
                 border-radius: 10px;
                 width: 100px;
                 box-shadow: aqua;
-               
             }
 
-            #btn-borrar:hover {
-                background-color: midnightblue;
-            }
-
-           
+                #btn-borrar:hover {
+                    background-color: midnightblue;
+                }
         </style>
+
+
 
     </fieldset>
 
 
-</form>
+</form> <br/>
+
+<a href="/Home/"> <input type="submit" name="btn-volver" id="btn-volver" value="Home" /> </a>
+
+<style>
+
+    #btn-volver {
+        background-color: #1b6ec2;
+        font-family: Calibri;
+        color: white;
+        font-size: larger;
+        text-align: center;
+        color: #fff;
+        border-color: transparent;
+        display: inline-block;
+        font-weight: 400;
+        border-radius: 10px;
+        width: 100px;
+        box-shadow: aqua;
+    }
+
+        #btn-volver:hover {
+            background-color: midnightblue;
+        }
+</style>
+
+

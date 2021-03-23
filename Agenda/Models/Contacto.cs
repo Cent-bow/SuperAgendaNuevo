@@ -43,7 +43,7 @@ namespace Agenda.Models
 
         public string Correo { get; set; }
 
-        public DateTime FechaNacimiento { get; set; }
+        public DateTime? FechaNacimiento { get; set; }
 
         public string Instagram { get; set; }
 
@@ -53,7 +53,10 @@ namespace Agenda.Models
 
         public string PuestoTrabajo { get; set; }
 
+        public string Nota { get; set; }
+
         public byte[] Foto { get; set; }
 
+      
     }
 }

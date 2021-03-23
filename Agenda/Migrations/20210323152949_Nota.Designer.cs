@@ -4,14 +4,16 @@ using Agenda.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Agenda.Migrations
 {
     [DbContext(typeof(dbContactosContext))]
-    partial class dbContactosContextModelSnapshot : ModelSnapshot
+    [Migration("20210323152949_Nota")]
+    partial class Nota
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -45,7 +47,7 @@ namespace Agenda.Migrations
                     b.Property<string>("Facebook")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("FechaNacimiento")
+                    b.Property<DateTime>("FechaNacimiento")
                         .HasColumnType("datetime2");
 
                     b.Property<byte[]>("Foto")

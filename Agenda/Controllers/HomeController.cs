@@ -43,6 +43,8 @@ namespace Agenda.Controllers
             {
                 _db.Contactos.Add (Input);
                 _db.SaveChanges();
+
+                return RedirectToAction("Index");
             }
             return View(Input);
         }

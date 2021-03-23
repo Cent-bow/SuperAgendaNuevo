@@ -4,14 +4,16 @@ using Agenda.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Agenda.Migrations
 {
     [DbContext(typeof(dbContactosContext))]
-    partial class dbContactosContextModelSnapshot : ModelSnapshot
+    [Migration("20210323161555_quitar_fecha_required")]
+    partial class quitar_fecha_required
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

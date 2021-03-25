@@ -27,10 +27,6 @@ namespace Agenda.Controllers
             return View(contactos);
         }
 
-
-
-
-
         public IActionResult Agregar()
         {
             return View();
@@ -69,17 +65,19 @@ namespace Agenda.Controllers
             return View(input);
         }
 
+        public IActionResult Detalle(int id)
+        {
+            var output = _db.Contactos.Find(id);
+            return View(output);
+        }
+
+
         public IActionResult Eliminar(int id)
         {
             var output = _db.Contactos.Find(id);
             return View(output);
         }
 
-        public IActionResult Detalle(int id)
-        {
-            var output = _db.Contactos.Find(id);
-            return View(output);
-        }
 
         [HttpPost]
 

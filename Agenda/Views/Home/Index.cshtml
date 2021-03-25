@@ -13,6 +13,7 @@
             <th>Nombres</th>
             <th>Apellidos</th>
             <th>Telefono Movil</th>
+             <th></th>
            
           
             
@@ -28,12 +29,11 @@
             <td>@item.Nombres</td>
             <td>@item.Apellidos</td>
             <td>@item.TelefonoMovil</td>
-            
-            
-            
-            
-            
-          
+            <td class="text-center">
+                <a href="/Home/Detalle/@item.Id" class="btn btn-secondary"> Detalle</a>
+                <a href="/Home/Modificar/@item.Id" class="btn btn-warning"> Modificar</a>
+                <a href="/Home/Eliminar/@item.Id" class="btn btn-danger"> Eliminar</a>
+            </td>
 
 
         </tr>}

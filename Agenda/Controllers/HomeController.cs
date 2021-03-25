@@ -69,6 +69,35 @@ namespace Agenda.Controllers
             return View(input);
         }
 
+        public IActionResult Eliminar(int id)
+        {
+            var output = _db.Contactos.Find(id);
+            return View(output);
+        }
+
+        public IActionResult Detalle(int id)
+        {
+            var output = _db.Contactos.Find(id);
+            return View(output);
+        }
+
+        [HttpPost]
+
+        public IActionResult Eliminar(Contacto input)
+        {
+
+            if (ModelState.IsValid)
+            {
+                _db.Entry(input).State = Microsoft.EntityFrameworkCore.EntityState.Deleted;
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(input);
+        }
+
+
+
 
 
 

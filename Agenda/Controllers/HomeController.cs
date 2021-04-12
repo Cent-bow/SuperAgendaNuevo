@@ -33,16 +33,16 @@ namespace Agenda.Controllers
         }
 
         [HttpPost]
-        public IActionResult Agregar (Contacto Input)
+        public IActionResult Agregar (Contacto input)
         {
             if (ModelState.IsValid)
             {
-                _db.Contactos.Add (Input);
+                _db.Contactos.Add (input);
                 _db.SaveChanges();
 
                 return RedirectToAction("Index");
             }
-            return View(Input);
+            return View(input);
         }
 
         public IActionResult Modificar (int id)
@@ -60,6 +60,8 @@ namespace Agenda.Controllers
             {
                 _db.Entry(input).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
                 _db.SaveChanges();
+
+                return RedirectToAction("Index");
             }
 
             return View(input);
@@ -88,6 +90,7 @@ namespace Agenda.Controllers
             {
                 _db.Entry(input).State = Microsoft.EntityFrameworkCore.EntityState.Deleted;
                 _db.SaveChanges();
+
                 return RedirectToAction("Index");
             }
 

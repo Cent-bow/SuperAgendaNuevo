@@ -2,6 +2,137 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+@model Agenda.Models.Contacto
 }
 
-<h1>Estoy en Modificar</h1>
+<form method="post" action="/Home/Modificar" class="form-horizontal">
+
+    <input type="hidden" name="Id" id="Id" value="@Model.Id" />
+
+
+    <fieldset>
+
+
+        <legend> <font face="Century Gothic"><h1>Modificar Contactos </h1></font></legend><hr /><br />
+
+
+        <fieldset>
+            <legend>Datos obligatorios</legend><hr /><br />
+
+
+            <p> Nombres <input type="text" name="Nombres" class="form-control" value="@Model.Nombres" required /> </p>
+            <p> Apellidos <input type="text" name="Apellidos" class="form-control" required /> </p>
+            <p> Teléfono Movil <input type="text" name="TelefonoMovil" class="form-control" required /> </p>
+
+
+        </fieldset>
+        <br />
+
+        <fieldset>
+
+            <legend>Otros datos</legend> <hr /> <br />
+
+
+            <p> Teléfono Casa <input type="text" name="TelefonoCasa" class="form-control" /> </p>
+            <p> Teléfono Trabajo <input type="text" name="TelefonoTrabajo" class="form-control" /> </p>
+            <p> Empresa <input type="text" name="Empresa" class="form-control" /> </p>
+            <p> Dirección <input type="text" name="Direccion" class="form-control" /> </p>
+            <p> Cédula <input type="text" name="Cedula" class="form-control" /> </p>
+            <p> Correo <input type="text" name="Correo" class="form-control" /> </p>
+            <p> Fecha de nacimiento <input type="text" name="FechaNacimiento" class="form-control" /> </p>
+            <p> Instagram <input type="text" name="Instagram" class="form-control" /> </p>
+            <p> Facebook <input type="text" name="Facebook" class="form-control" /> </p>
+            <p> Pagina web <input type="text" name="PaginaWeb" class="form-control" /> </p>
+            <p> Puesto de trabajo <input type="text" name="PuestoTrabajo" class="form-control" /> </p>
+
+
+
+        </fieldset> <br />
+
+        <fieldset>
+
+            <textarea name="Nota" rows="5" cols="60" placeholder="Agregar nota"></textarea>
+
+        </fieldset> <br />
+
+
+        <input type="submit" name="btn-enviar" id="btn-enviar" value="Enviar" />
+        <style>
+
+            #btn-enviar {
+                background-color: #1b6ec2;
+                font-family: Calibri;
+                color: white;
+                font-size: larger;
+                text-align: center;
+                color: #fff;
+                border-color: transparent;
+                display: inline-block;
+                font-weight: 400;
+                border-radius: 10px;
+                width: 100px;
+                box-shadow: aqua;
+            }
+
+                #btn-enviar:hover {
+                    background-color: midnightblue
+                }
+        </style>
+
+        <input type="reset" name="btn-borrar" id="btn-borrar" value="Borrar" />
+
+
+        <style>
+
+            #btn-borrar {
+                background-color: #1b6ec2;
+                font-family: Calibri;
+                color: white;
+                font-size: larger;
+                text-align: center;
+                color: #fff;
+                border-color: transparent;
+                display: inline-block;
+                font-weight: 400;
+                border-radius: 10px;
+                width: 100px;
+                box-shadow: aqua;
+            }
+
+                #btn-borrar:hover {
+                    background-color: midnightblue;
+                }
+        </style>
+
+
+
+    </fieldset>
+
+
+</form>
+<br />
+
+<a href="/Home/"> <input type="submit" name="btn-volver" id="btn-volver" value="Home" /> </a>
+
+<style>
+
+    #btn-volver {
+        background-color: #1b6ec2;
+        font-family: Calibri;
+        color: white;
+        font-size: larger;
+        text-align: center;
+        color: #fff;
+        border-color: transparent;
+        display: inline-block;
+        font-weight: 400;
+        border-radius: 10px;
+        width: 100px;
+        box-shadow: aqua;
+    }
+
+        #btn-volver:hover {
+            background-color: midnightblue;
+        }
+</style>
+

@@ -2,6 +2,15 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+@model Agenda.Models.Contacto
 }
 
-<h1>Estoy en eliminar</h1>
+<form method="post" action="/Home/Eliminar" class="form-horizontal">
+    <input type="hidden" name="Id" id="Id" value="@Model.Id" />
+    <input type="hidden" name="Nombres" id="Nombres" value="@Model.Nombres" />
+    <input type="hidden" name="Apellidos" id="Apellidos" value="@Model.Apellidos" />
+    <input type="hidden" name="TelefonoMovil" id="TelefonoMovil" value="@Model.TelefonoMovil" />
+
+    <h1> ¿Esta seguro que desea eliminar el regitro?</h1>
+    <button type="submit" class="btn btn-danger">Eliminar Contacto</button>
+</form>

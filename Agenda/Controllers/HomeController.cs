@@ -85,16 +85,10 @@ namespace Agenda.Controllers
 
         public IActionResult Eliminar(Contacto input)
         {
-
-            if (ModelState.IsValid)
-            {
                 _db.Entry(input).State = Microsoft.EntityFrameworkCore.EntityState.Deleted;
                 _db.SaveChanges();
 
-                return RedirectToAction("Index");
-            }
-
-            return View(input);
+            return RedirectToAction("Index");
         }
 
 

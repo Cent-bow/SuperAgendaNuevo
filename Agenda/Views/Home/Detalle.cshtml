@@ -2,6 +2,73 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+@model Agenda.Models.Contacto
 }
 
-<h1>Estoy en detalle</h1>
+
+   
+   <font face="Century Gothic"><h1>Informacion Completa </h1></font><hr /><br />
+
+        <table cellpadding="10" cellspacing="20" border="1">
+            <tr>
+
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Telefono Movil</th>
+                <th> Telefono Casa</th>
+                <th> Telefono Trabajo</th>
+                <th> Empresa<th>
+                <th> Direccion</th>
+                <th> Cedula</th>
+                <th> Correo</th>
+                <th> Fecha de Nacimiento</th>
+                <th>Instagram</th>
+                <th>Facebook</th>
+                <th>pagina web</th>
+                <th> Puesto de Trabajo</th>
+                <th> Foto</th>
+                <th>Nota</th>
+
+                
+            </tr>
+
+            <tr>
+              
+                <td> @Model.Nombres</td>
+            
+                <td>@Model.Apellidos</td>
+            
+                <td>@Model.TelefonoMovil</td>
+           
+                <td>@Model.TelefonoCasa</td>
+          
+                <td>@Model.TelefonoTrabajo</td>
+          
+                <td>@Model.Empresa</td>
+           
+                <td>@Model.Direccion</td>
+         
+                <td>@Model.Cedula</td>
+         
+                <td>@Model.Correo</td>
+            
+                <td>@Model.FechaNacimiento</td>
+           
+                <td>@Model.Instagram</td>
+           
+                <td>@Model.Facebook</td>
+           
+                <td>@Model.PaginaWeb</td>
+          
+                <td>@Model.PuestoTrabajo</td>
+          
+                <td>@Model.Foto</td>
+
+                <td>@Model.Nota</td>
+           
+               
+            </tr>
+
+            
+
+            </table>

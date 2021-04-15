@@ -9,7 +9,7 @@
 
     <font face="Century Gothic"><h1>Información Completa </h1></font><hr /><br />
 
-    <table cellpadding="10" cellspacing="20" border="3">
+    <table cellpadding="10" cellspacing="20" border="1">
 
         <tr>
 
@@ -35,7 +35,7 @@
 
         <tr>
 
-            <td> @Model.Nombres</td>
+            <td>@Model.Nombres</td>
 
             <td>@Model.Apellidos</td>
 
@@ -71,19 +71,33 @@
         </tr>
 
         <style>
-            th{
-                background-color: darkgray;
-                color: white;
+            th {
+             
                 text-align: center;
-              
             }
         </style>
 
-        <style>
+        
 
-            td{
-                background-color:white;
+        <style>
+            #btn-volver {
+                background-color: #1b6ec2;
+                font-family: Calibri;
+                color: white;
+                font-size: larger;
+                text-align: center;
+                color: #fff;
+                border-color: transparent;
+                display: inline-block;
+                font-weight: 400;
+                border-radius: 10px;
+                width: 100px;
+                box-shadow: aqua;
             }
+
+                #btn-volver:hover {
+                    background-color: midnightblue;
+                }
         </style>
 
 

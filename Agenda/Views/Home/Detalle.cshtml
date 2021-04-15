@@ -5,70 +5,127 @@
 @model Agenda.Models.Contacto
 }
 
+<form action="/Home/Detalle" class="form-horizontal">
 
-   
-   <font face="Century Gothic"><h1>Informacion Completa </h1></font><hr /><br />
+    <font face="Century Gothic"><h1>Información Completa </h1></font><hr /><br />
 
-        <table cellpadding="10" cellspacing="20" border="1">
-            <tr>
+    <table cellpadding="10" cellspacing="20" border="3">
 
-                <th>Nombres</th>
-                <th>Apellidos</th>
-                <th>Telefono Movil</th>
-                <th> Telefono Casa</th>
-                <th> Telefono Trabajo</th>
-                <th> Empresa<th>
-                <th> Direccion</th>
-                <th> Cedula</th>
-                <th> Correo</th>
-                <th> Fecha de Nacimiento</th>
-                <th>Instagram</th>
-                <th>Facebook</th>
-                <th>pagina web</th>
-                <th> Puesto de Trabajo</th>
-                <th> Foto</th>
-                <th>Nota</th>
+        <tr>
 
-                
-            </tr>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Telefono Movil</th>
+            <th> Telefono Casa</th>
+            <th> Telefono Trabajo</th>
+            <th> Empresa</th>
+            <th> Direccion</th>
+            <th> Cedula</th>
+            <th> Correo</th>
+            <th> Fecha de Nacimiento</th>
+            <th>Instagram</th>
+            <th>Facebook</th>
+            <th>pagina web</th>
+            <th> Puesto de Trabajo</th>
+            <th> Foto</th>
+            <th>Nota</th>
 
-            <tr>
+
+        </tr>
+
+        <tr>
+
+            <td> @Model.Nombres</td>
+
+            <td>@Model.Apellidos</td>
+
+            <td>@Model.TelefonoMovil</td>
+
+            <td>@Model.TelefonoCasa</td>
+
+            <td>@Model.TelefonoTrabajo</td>
+
+            <td>@Model.Empresa</td>
+
+            <td>@Model.Direccion</td>
+
+            <td>@Model.Cedula</td>
+
+            <td>@Model.Correo</td>
+
+            <td>@Model.FechaNacimiento</td>
+
+            <td>@Model.Instagram</td>
+
+            <td>@Model.Facebook</td>
+
+            <td>@Model.PaginaWeb</td>
+
+            <td>@Model.PuestoTrabajo</td>
+
+            <td>@Model.Foto</td>
+
+            <td>@Model.Nota</td>
+
+
+        </tr>
+
+        <style>
+            th{
+                background-color: darkgray;
+                color: white;
+                text-align: center;
               
-                <td> @Model.Nombres</td>
-            
-                <td>@Model.Apellidos</td>
-            
-                <td>@Model.TelefonoMovil</td>
-           
-                <td>@Model.TelefonoCasa</td>
-          
-                <td>@Model.TelefonoTrabajo</td>
-          
-                <td>@Model.Empresa</td>
-           
-                <td>@Model.Direccion</td>
-         
-                <td>@Model.Cedula</td>
-         
-                <td>@Model.Correo</td>
-            
-                <td>@Model.FechaNacimiento</td>
-           
-                <td>@Model.Instagram</td>
-           
-                <td>@Model.Facebook</td>
-           
-                <td>@Model.PaginaWeb</td>
-          
-                <td>@Model.PuestoTrabajo</td>
-          
-                <td>@Model.Foto</td>
+            }
+        </style>
 
-                <td>@Model.Nota</td>
-           
-               
-            </tr>
+        <style>
 
-            
+            td{
+                background-color:white;
+            }
+        </style>
 
-            </table>
+
+
+    </table>
+
+    <br /><hr />
+
+    <b><p>Nombre:</b>   @Model.Nombres</p>
+
+    <br /><b><p>Apellido:</b>  @Model.Apellidos</p>
+
+    <b> <br /><p>Telefono Movil:</b> @Model.TelefonoMovil</p>
+
+    <b><br /><p>Telefono Casa:</b> @Model.TelefonoCasa</p>
+
+    <b> <br /><p>Telefono Trabajo:</b>  @Model.TelefonoTrabajo</p>
+
+    <b> <br /><p>Empresa:</b>  @Model.Empresa</p>
+
+    <b><br /><p>Direccion:</b>  @Model.Direccion</p>
+
+    <b><br /><p>Cedula:</b> @Model.Cedula</p>
+
+   <b> <br /><p>Correo:</b> @Model.Correo</p>
+
+    <b><br /><p>Fecha de Nacimiento:</b> @Model.FechaNacimiento</p>
+
+   <b> <br /><p>Instagram:</b> @Model.Instagram</p>
+
+    <b><br /><p>Facebook:</b> @Model.Facebook</p>
+
+   <b> <br /><p>Pagina web:</b> @Model.PaginaWeb</p>
+
+    <b><br /><p>Puesto de Trabajo:</b> @Model.PuestoTrabajo</p>
+
+    <b><br /><p>Foto:</b>  @Model.Foto</p>
+
+   <b> <br /><p>Nota:</b> @Model.Nota</p>
+
+
+</form>
+<br/>
+
+<a href="/Home/"> <input type="submit" name="btn-volver" id="btn-volver" value="Home" /> </a>

@@ -57,6 +57,8 @@ namespace Agenda.Models
 
         public byte[] Foto { get; set; }
 
-      
+        public TipoContacto Tipo { get; set; }
+
+
     }
 }

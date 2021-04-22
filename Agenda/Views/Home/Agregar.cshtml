@@ -19,7 +19,7 @@
             <p> Nombres <input type="text" name="Nombres" class="form-control" required /> </p>
             <p> Apellidos <input type="text" name="Apellidos" class="form-control" required /> </p>
             <p> Teléfono Movil <input type="text" name="TelefonoMovil" class="form-control" required /> </p>
-            
+
 
         </fieldset>
         <br />
@@ -45,11 +45,22 @@
 
         </fieldset> <br />
 
-           <fieldset>
+              <fieldset>
 
-             <textarea name="Nota" rows="5" cols="60" placeholder="Agregar nota"></textarea>
+                        <textarea name="Nota" rows="5" cols="60" placeholder="Agregar nota"></textarea><br/>
 
-           </fieldset> <br />
+
+                       
+
+               <br/> <div class="form-group">
+                       <label class="col-2">Tipo de Contacto</label>
+                        <div class="col-4">
+                           @Html.DropDownListFor(a => a.Tipo, Html.GetEnumSelectList<Agenda.Models.TipoContacto>(), new { @class = "form-control" })
+                        </div>
+                     </div>
+
+
+               </fieldset> <br />
 
 
         <input type="submit" name="btn-enviar" id="btn-enviar" value="Enviar" />
@@ -100,10 +111,12 @@
                 }
         </style>
 
+       
 
 
     </fieldset>
 
+   
 
 </form> <br/>
 

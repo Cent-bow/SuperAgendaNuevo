@@ -37,7 +37,8 @@ namespace Agenda.Controllers
         {
             if (ModelState.IsValid)
             {
-                _db.Contactos.Add (input);
+                _db.Entry(input).State = Microsoft.EntityFrameworkCore.EntityState.Added;
+               // _db.Contactos.Add (input); //
                 _db.SaveChanges();
 
                 return RedirectToAction("Index");

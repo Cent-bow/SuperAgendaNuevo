@@ -19,10 +19,34 @@
         <fieldset>
             <legend>Datos obligatorios</legend><hr /><br />
 
+ <div class="form-group">
 
-            <p> Nombres <input type="text" name="Nombres" class="form-control" value="@Model.Nombres" required /> </p>
-            <p> Apellidos <input type="text" name="Apellidos" class="form-control" value="@Model.Apellidos" required /> </p>
-            <p> Teléfono Movil <input type="text" name="TelefonoMovil" class="form-control" value="@Model.TelefonoMovil" required /> </p>
+            @Html.LabelFor(a => a.Nombres, new { @class = "col-2" })
+
+            <div class="col-lg-4">
+
+                @Html.TextBoxFor(a => a.Nombres, new { @class = "form-control" }) 
+
+            </div> <br/>
+
+            @Html.LabelFor(a => a.Apellidos, new { @class = "col-2" })
+
+            <div class="col-lg-4">
+
+                @Html.TextBoxFor(a => a.Apellidos, new { @class = "form-control" })
+
+            </div> <br/>
+
+            @Html.LabelFor(a => a.TelefonoMovil, new { @class = "col-2" })
+
+            <div class="col-lg-4">
+
+                @Html.TextBoxFor(a => a.TelefonoMovil, new { @class = "form-control" })
+
+            </div> 
+
+
+        </div>
 
 
         </fieldset>
@@ -33,17 +57,101 @@
             <legend>Otros datos</legend> <hr /> <br />
 
 
-            <p> Teléfono Casa <input type="text" name="TelefonoCasa" class="form-control" /> </p>
-            <p> Teléfono Trabajo <input type="text" name="TelefonoTrabajo" class="form-control" /> </p>
-            <p> Empresa <input type="text" name="Empresa" class="form-control" /> </p>
-            <p> Dirección <input type="text" name="Direccion" class="form-control" /> </p>
-            <p> Cédula <input type="text" name="Cedula" class="form-control" /> </p>
-            <p> Correo <input type="text" name="Correo" class="form-control" /> </p>
-            <p> Fecha de nacimiento <input type="text" name="FechaNacimiento" class="form-control" /> </p>
-            <p> Instagram <input type="text" name="Instagram" class="form-control" /> </p>
-            <p> Facebook <input type="text" name="Facebook" class="form-control" /> </p>
-            <p> Pagina web <input type="text" name="PaginaWeb" class="form-control" /> </p>
-            <p> Puesto de trabajo <input type="text" name="PuestoTrabajo" class="form-control" /> </p>
+            <div class="form-group">
+
+                @Html.LabelFor(a => a.TelefonoCasa, new { @class = "col-2" })
+
+                <div class="col-lg-4">
+
+                    @Html.TextBoxFor(a => a.TelefonoCasa, new { @class = "form-control" })
+
+                </div> <br />
+
+                @Html.LabelFor(a => a.TelefonoTrabajo, new { @class = "col-2" })
+
+                <div class="col-lg-4">
+
+                    @Html.TextBoxFor(a => a.TelefonoTrabajo, new { @class = "form-control" })
+
+                </div> <br />
+
+                @Html.LabelFor(a => a.Empresa, new { @class = "col-2" })
+
+                <div class="col-lg-4">
+
+                    @Html.TextBoxFor(a => a.Empresa, new { @class = "form-control" })
+
+                </div> <br />
+
+                @Html.LabelFor(a => a.Direccion, new { @class = "col-2" })
+
+                <div class="col-lg-4">
+
+                    @Html.TextBoxFor(a => a.Direccion, new { @class = "form-control" })
+
+                </div> <br />
+
+                @Html.LabelFor(a => a.Cedula, new { @class = "col-2" })
+
+                <div class="col-lg-4">
+
+                    @Html.TextBoxFor(a => a.Cedula, new { @class = "form-control" })
+
+                </div> <br />
+
+                @Html.LabelFor(a => a.Correo, new { @class = "col-2" })
+
+                <div class="col-lg-4">
+
+                    @Html.TextBoxFor(a => a.Correo, new { @class = "form-control" })
+
+                </div> <br />
+
+
+                @Html.LabelFor(a => a.FechaNacimiento, new { @class = "col-2" })
+
+                <div class="col-lg-4">
+
+                    @Html.TextBoxFor(a => a.FechaNacimiento, new { @class = "form-control" })
+
+                </div> <br />
+
+                @Html.LabelFor(a => a.Instagram, new { @class = "col-2" })
+
+                <div class="col-lg-4">
+
+                    @Html.TextBoxFor(a => a.Instagram, new { @class = "form-control" })
+
+                </div> <br />
+
+                @Html.LabelFor(a => a.Facebook, new { @class = "col-2" })
+
+                <div class="col-lg-4">
+
+                    @Html.TextBoxFor(a => a.Facebook, new { @class = "form-control" })
+
+                </div> <br />
+
+                @Html.LabelFor(a => a.PaginaWeb, new { @class = "col-2" })
+
+                <div class="col-lg-4">
+
+                    @Html.TextBoxFor(a => a.PaginaWeb, new { @class = "form-control" })
+
+                </div> <br />
+
+                @Html.LabelFor(a => a.PuestoTrabajo, new { @class = "col-2" })
+
+                <div class="col-lg-4">
+
+                    @Html.TextBoxFor(a => a.PuestoTrabajo, new { @class = "form-control" })
+
+                </div> <br />
+
+
+
+
+            </div>
 
 
 

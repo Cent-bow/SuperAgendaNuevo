@@ -151,7 +151,9 @@
             </div>
 
 
-            <textarea name="Nota" rows="5" cols="60" placeholder="Agregar nota"></textarea><br />
+            @Html.TextAreaFor(a => a.Nota, new { @class = "form-control", @rows = "5", @cols = "60", @placeholder = "Agregar Nota" })
+
+            <br />
 
 
 

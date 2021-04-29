@@ -24,24 +24,36 @@ namespace Agenda.Models
         [Required]
 
         public string Apellidos { get; set; }
-        [Required, MaxLength(14)]
+
+        [Required, MaxLength(14), Display(Name= "Telefono Movil")]
 
 
         public string TelefonoMovil { get; set; }
-        [MaxLength(14)]
+
+
+        [MaxLength(14), Display(Name = "Telefono Casa")]
 
         public string TelefonoCasa { get; set; }
-        [MaxLength(14)]
 
+
+        [MaxLength(14), Display(Name = "Telefono Trabajo ")]
+        
         public string TelefonoTrabajo { get; set; }
+
 
         public string Empresa { get; set; }
 
+        [Display(Name = "Dirección")]
+
         public string  Direccion { get; set; }
+
+        [Display(Name= "Cédula")]
 
         public string Cedula { get; set; }
 
         public string Correo { get; set; }
+
+        [Display(Name = "Fecha de Nacimiento")]
 
         public DateTime? FechaNacimiento { get; set; }
 
@@ -49,8 +61,12 @@ namespace Agenda.Models
 
         public string Facebook { get; set; }
 
+
+        [Display(Name = "Página Web")]
+
         public string PaginaWeb { get; set; }
 
+        [Display(Name = "Puesto de Trabajo")]
         public string PuestoTrabajo { get; set; }
 
         public string Nota { get; set; }

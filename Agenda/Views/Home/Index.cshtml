@@ -2,22 +2,23 @@
 @{ ViewData["Title"] = "Home Page"; }
 
 <div class="text-center">
-    <h1 class="display-4">Bienvenidos a mi Super Agenda</h1> 
+    <h1 class="display-4">Bienvenidos a mi Super Agenda</h1>
 </div>
 
-<a href ="/Home/Agregar" id="btn-agregar" class="btn btn-primary"> Agregar contactos</a> 
+<a href="/Home/Agregar" id="btn-agregar" class="btn btn-primary"> Agregar contactos</a>
+<button type="button" class="btn btn-success" id="btnMensaje">Presioname</button>
 
-  <table class="table table-bordered table-striped">
-     <thead>
-         <tr>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
             <th>Tipo</th>
             <th>Nombres</th>
             <th>Apellidos</th>
             <th>Telefono Movil</th>
-             <th></th>
-           
-          
-            
+            <th></th>
+
+
+
 
 
 
@@ -26,18 +27,44 @@
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-            <td>@item.Tipo</td>
-            <td>@item.Nombres</td>
-            <td>@item.Apellidos</td>
-            <td>@item.TelefonoMovil</td>
-            <td class="text-center">
-                <a href="/Home/Detalle/@item.Id" class="btn btn-secondary"> Detalle</a>
-                <a href="/Home/Modificar/@item.Id" class="btn btn-warning"> Modificar</a>
-                <a href="/Home/Eliminar/@item.Id" class="btn btn-danger"> Eliminar</a>
-            </td>
+            <tr>
+                <td>@item.Tipo</td>
+                <td>@item.Nombres</td>
+                <td>@item.Apellidos</td>
+                <td>@item.TelefonoMovil</td>
+                <td class="text-center">
+                    <a href="/Home/Detalle/@item.Id" class="btn btn-secondary"> Detalle</a>
+                    <a href="/Home/Modificar/@item.Id" class="btn btn-warning"> Modificar</a>
+                    <a href="/Home/Eliminar/@item.Id" class="btn btn-danger"> Eliminar</a>
+                </td>
 
 
-        </tr>}
+            </tr>
+}
     </tbody>
 </table>
+
+@section scripts{
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $('#btnMensaje').click(function () {
+                alert(fnGetMensaje());
+
+            });
+
+
+        });
+
+        var msg = "Hola Mundo";
+
+        function fnGetMensaje() {
+            return msg;
+        }
+
+    </script>
+
+     }
+   

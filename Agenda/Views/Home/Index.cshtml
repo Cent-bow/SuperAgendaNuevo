@@ -1,6 +1,12 @@
 ﻿@model IEnumerable<Contacto>
 @{ ViewData["Title"] = "Home Page"; }
 
+
+<div class="float-right">
+    <i class=" fas fa-shopping-cart" style= "color: #1861ac"></i><span class="badge badge-primary" id="cantEnCarrito">0</span>
+</div>
+
+
 <div class="text-center">
     <h1 class="display-4">Bienvenidos a mi Super Agenda</h1>
 </div>
@@ -36,6 +42,7 @@
                     <a href="/Home/Detalle/@item.Id" class="btn btn-secondary"> Detalle</a>
                     <a href="/Home/Modificar/@item.Id" class="btn btn-warning"> Modificar</a>
                     <a href="/Home/Eliminar/@item.Id" class="btn btn-danger"> Eliminar</a>
+                    <button type="button" class="btn btn-primary btn-agregar-carrito"><i class="fas fa-plus"></i></button>
                 </td>
 
 
@@ -50,13 +57,28 @@
 
         $(document).ready(function () {
 
+            $('.btn-agregar-carrito').click(function () {
+
+                $.post('/Home/AgregarAlCarrito/', {}, function (respuesta) {
+                    if (respuesta.result === true) {
+
+                        var badgeCarrito = $('#cantEnCarrito');
+
+                        var cantidad = parseInt(badgeCarrito.text());
+                        cantidad++
+                        badgeCarrito.text(cantidad);
+                    }
+                });
+            });
+        });
+
+
+
             $('#btnMensaje').click(function () {
                 alert(fnGetMensaje());
 
             });
 
-
-        });
 
         var msg = "Hola Mundo";
 

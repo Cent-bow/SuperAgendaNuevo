@@ -75,6 +75,8 @@ namespace Agenda.Models
 
         public TipoContacto Tipo { get; set; }
 
+        public TipoContacto TipoContacto { get; set; }
+
 
     }
 }

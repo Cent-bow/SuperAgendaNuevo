@@ -1,6 +1,8 @@
 ﻿@model IEnumerable<Contacto>
 @{ ViewData["Title"] = "Home Page"; }
 
+<link href="~/lib/datatable/css/datatable.css" rel="stylesheet" />
+<link href="~/lib/datatable/css/datatable-bootstrap.css" rel="stylesheet" />
 
 <div class="float-right">
     <i class=" fas fa-shopping-cart" style="color: #1861ac"></i><span class="badge badge-primary" id="cantEnCarrito">0</span>
@@ -16,7 +18,17 @@
 <button type="button" class="btn btn-success">Presioname otra vez</button>
 
 
-<table class="table table-bordered table-striped">
+<div class=" col-11">
+    <input type="text" id="txtsearch" name="txtsearch" class="form-control" />
+</div>
+
+
+<div class=" col-1">
+    <input type="button"  class="btn btn-success btn-block btn-search"   />
+</div>
+
+
+<table class="table table-bordered table-striped" id="tablaProductos">
     <thead>
         <tr>
             <th>Tipo</th>
@@ -24,7 +36,6 @@
             <th>Apellidos</th>
             <th>Telefono Movil</th>
             <th></th>
-
 
 
 
@@ -55,9 +66,21 @@
 
 @section scripts{
 
+
+    <script src="~/lib/datatable/js/datatable.js"></script>
+
     <script type="text/javascript">
 
         $(document).ready(function () {
+
+
+            $('#tablaProductos').DataTable();
+
+            $('.btn-search').click(function () {
+                window.location = "/Home/Index?Nombre=" + $('#textsearch').val();
+            });
+
+
 
             $('.btn-agregar-carrito').click(function () {
 
@@ -80,7 +103,7 @@
 
         });
 
-        
+
         var msg = "Hola Mundo";
 
         function fnGetMensaje() {
